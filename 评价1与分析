@@ -1,18 +1,6 @@
-模糊综合评价
-def mul_mymin_operator(A, R):
-    '''
-    利用乘法最小值算子合成矩阵
-    :param A:评判因素权向量 A = (a1,a2 ,L,an )
-    :param R:模糊关系矩阵 R
-    :return:
-    '''
-    B = np.zeros((1, R.shape[1]))
-    for column in range(0, R.shape[1]):
-        list = []
-        for row in range(0, R.shape[0]):
-            list.append(A[row] * R[row, column])
-        B[0, column] = mymin(list)
-    return B
+模糊综合评价:
+数学建模入门-python实现单目标模糊综合评价法:https://blog.csdn.net/weixin_44112790/article/details/88090412
+数学建模入门-python实现多目标模糊综合评价法:https://blog.csdn.net/weixin_44112790/article/details/88090934
 主成分综合评价
 层次分析法
 熵值法
