@@ -1,0 +1,22 @@
+模糊综合评价
+def mul_mymin_operator(A, R):
+    '''
+    利用乘法最小值算子合成矩阵
+    :param A:评判因素权向量 A = (a1,a2 ,L,an )
+    :param R:模糊关系矩阵 R
+    :return:
+    '''
+    B = np.zeros((1, R.shape[1]))
+    for column in range(0, R.shape[1]):
+        list = []
+        for row in range(0, R.shape[0]):
+            list.append(A[row] * R[row, column])
+        B[0, column] = mymin(list)
+    return B
+主成分综合评价
+层次分析法
+熵值法
+秩和比综合评价
+敏感性分析
+灰度关联分析
+数据包络DEA
